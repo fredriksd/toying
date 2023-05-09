@@ -1,0 +1,6 @@
+
+[CXX]
+compiler = "g++"
+
+[common]
+archiver = "/usr/bin/ar"

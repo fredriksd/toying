@@ -1,0 +1,16 @@
+[project_configuration]
+cxx_std = "CXX20"
+language = "C++"
+
+[executable.x]
+sources = ["${YAMBS_MANIFEST_DIR}/src/main.cpp"]
+
+[executable.x.dependencies.nlohmann]
+include_directory = "${env:VCPKG_ROOT}/installed/x64-linux/include"
+
+[[executable.x.defines]]
+macro = "SOME_VAL"
+value = "1"
+
+[executable.tests]
+sources = ["test/test_hashbrown.cpp"]
